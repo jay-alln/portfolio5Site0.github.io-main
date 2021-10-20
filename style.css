@@ -332,7 +332,7 @@ section {
   margin-bottom: 20px;
 }
 .gallery .gallery-filter .filter-item {
-  color: #ffffff;
+  color: var(--green);
   font-size: 18px;
   text-transform: uppercase;
   display: inline-block;
@@ -343,8 +343,8 @@ section {
   transition: all 0.3s ease;
 }
 .gallery .gallery-filter .filter-item.active {
-  color: #ff9800;
-  border-color: #ff9800;
+  color: var(--darkgray);
+  border-color: var(--dark);
 }
 .gallery .gallery-item {
   width: calc(100% / 3);
@@ -376,7 +376,25 @@ section {
   left: 0;
 }
 
-/* accordion */
+gallery .gallery-item-inner img{
+	width: 100%;
+}
+.gallery .gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.gallery .gallery-item.hide{
+	display: none;
+}
+
+/* accordion start */
 
 .gallery .contentBox {
   width: 100%;
